@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Function</title>
+</head>
+<body>
+
+  <script>
+  
+    // Write a function `charIsVowel(c)` that takes a character (i.e. a string of length 1) as argument and returns true if it is a vowel, false otherwise. E.g. `charIsVowel("b")` returns `false`.
+    const charIsVowel = (c) => {
+      c = c.toLowerCase();
+      if (c === 'a' || c === 'e' || c === 'i' || c === 'o' || c === 'u' || c === 'y') {
+        // return true; 
+        return 'yes it is a vowel';
+      } else {
+        // return false;
+        return 'no it isn\'t a vowel';
+      }
+    }
+
+    console.log(charIsVowel('y'));
+
+
+    // once done, create seperate if statements for the following and log "yes it is a vowel / no it isn't a vowel"
+
+    // Check if capital A is a vowel
+    // if (charIsntVowel('A')) {
+    //   console.log('yes it is a vowel')
+    // } can also work as the conditional statement because strings are truthy
+
+    console.log(charIsVowel('A'));
+
+    // check if c isn't a vowel (HINT: Remember opposites with !)
+    const charIsntVowel = (c) => {
+        c = c.toLowerCase();
+        if (c != 'a' || c != 'e' || c != 'i' || c != 'o' || c != 'u' || c != 'y') {
+          // return true; 
+          return 'this isn\'t a vowel';
+        } 
+      }
+
+      console.log(charIsntVowel('s'));
+
+      // or
+      // if (charIsVowel('C') === false) 
+      // or
+      // if (!charIsVowel('C'))
+
+    // check if lowercase e AND uppercase O is a vowel
+    const checkingLetters = (a, b) => {
+      if (a === 'e' && b === 'O') {
+        return 'they are both vowels';
+      } else  {
+        return 'they are not vowels';
+      }
+    }
+
+    // or if(charIsVowel('e') && charIsVowel('O')); because this checks if they are true
+
+    //  console.log(charIsVowel('e'));
+    //  console.log(charIsVowel('O'));
+
+    console.log(checkingLetters('e', 'O'));
+
+    // check if either x or u is a vowel
+    // console.log(charIsVowel('x'));
+    // console.log(charIsVowel('u'));
+
+    // check that h isn't a vowel and e is a vowel
+    // console.log(charIsntVowel('h'));
+    // console.log(charIsVowel('e'));
+
+  </script>
+
+  <p>Nothing to see here! Open up your console to see what JavaScript is doing.</p>
+</body>
+</html>
