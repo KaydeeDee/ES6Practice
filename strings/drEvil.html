@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Create a function called DrEvil.It should take a single argument, an amount, and return '<amount> dollars', except it will add '(pinky)' at the end if the amount is 1 million
+
+        const drEvil = (amount) => {
+            if (amount === 1000000) {
+                return `${amount} (pinky)`;
+            } else {
+                return `${amount}`;
+            }
+        }
+
+        console.log(drEvil(2000));
+    </script>
+</body>
+</html>

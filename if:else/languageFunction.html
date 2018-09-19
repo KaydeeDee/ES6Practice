@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Write a function named helloWorld that:
+        //takes 1 argument, a language code(e.g. "es", "de", "en")
+        //returns "Hello, World" for the given language, for atleast 3 languages.It should default to returning English.
+        //Call that function for each of the supported languages and log the result to make sure it works.
+
+        const helloWorld = (lang) => {
+            if (lang === 'fr') {
+                return 'bonjour monde!';
+            } else if (lang === 'sp') {
+                return 'hola mondo!' //this is made up spanish (:)
+            } else {
+                return 'hello world!'
+            }
+        }
+
+        console.log(helloWorld('es'));
+    </script>
+</body>
+</html>

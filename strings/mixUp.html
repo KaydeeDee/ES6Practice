@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // Create a function called mixUp.It should take in two strings, and return the concatenation of the two strings(separated by a space) slicing out and swapping the first 2 characters of each.You can assume that the strings are at least 2 characters long.
+
+    //  mixUp('mix', pod'): 'pox mid'
+
+    const mixUp = (stringOne, stringTwo) => {
+        // grabbing the first letter of each word
+        const firstLetterStringOne = stringOne.charAt(0);
+        const firstLetterStringTwo = stringTwo.charAt(0);
+
+        // swiching them with .replace. The first value is the thing to replace, the second is what to replace it with.
+        const newFirstStringOne = stringOne.replace(firstLetterStringOne, firstLetterStringTwo);
+        const newFirstStringTwo = stringTwo.replace(firstLetterStringTwo, firstLetterStringOne);
+
+        return `${newFirstStringOne}, ${newFirstStringTwo}`;
+    }
+
+    console.log(mixUp('whale', 'broom'));
+    
+    </script>
+</body>
+</html>
