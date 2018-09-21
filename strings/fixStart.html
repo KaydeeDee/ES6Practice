@@ -11,12 +11,17 @@
         // Create a function called fixStart.It should take a single argument, a string, and return a version where all occurences of its first character have been replaced with '*', except for the first character itself.You can assume that the string is at least one character long.
 
         const fixStart = (str) => {
-            const firstLetter = str.charAt(0);
+            const firstLetter = str.toUpperCase().charAt(0);
+            console.log(firstLetter);
 
-            return str.replace(firstLetter, '*');
-        }
-            // to be continued!
+            return str.replace(/([^$firstLetter])/g, '*');
+
+            // const starWordfirstLetter = starWord.charAt(0);
+
+            // return starWord.indexOf(firstLetter);
             
+        }
+
         console.log(fixStart('bubbles'));
     </script>
 </body>
