@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const dogs = ['Snickers', 'Prudence', 'Dug'];
+
+        // for loop approach to go through array
+        for (let i = 0; i < dogs.length; i++) {
+            console.log(dogs[i]);
+        }
+
+        // FOR EACH
+
+        // forEach approach to go through array
+         const dogCallback = (dog, index) => {
+                console.log(dog);
+                console.log(index);
+            }
+
+        dogs.forEach(dogCallback); 
+        // OR
+        dogs.forEach((dog, index) => {
+            console.log(dog);
+            console.log(index);
+        });
+
+        // MAPPING
+        // divide the numbers in half
+        const numbersArray = [10, 12, 40, 22];
+
+        const afterMathArray = numbersArray.map((value) => {
+            // console.log(value);
+            return value / 2;
+        });
+
+        console.log(afterMathArray);
+
+        // join the names
+        const persons = [
+                { first: 'Taylor', last: 'Swift' },
+                { first: 'Ash', last: 'Ketchum' },
+                { first: 'Hermione', last: 'Granger' }
+            ];
+
+        const combinedNames = persons.map((person) => {
+            // console.log(value);
+            return `${person.first} ${person.last}`;
+        });
+
+        console.log(combinedNames);
+
+        // FILTER
+        // return if the name if three characters or shorter
+        const names = ['Sam', 'Jamie', 'Alex', 'Andy', 'August', 'Chris', 'Dakota', 'Drew', 'Max'];
+
+        const shorterNames = names.filter((name) => {
+            // filter needs a boolean. If true is met, it "picks" those out of the array
+            if (name.length <= 3) {
+                return true;
+            }
+        });
+
+        console.log(shorterNames);
+
+        // filter students who have above 80
+        const students = [
+                {
+                    name: 'Pat',
+                    grade: 58
+                },
+                {
+                    name: 'Taylor',
+                    grade: 93
+                },
+                {
+                    name: 'Dale',
+                    grade: 80
+                },
+                {
+                    name: 'Casey',
+                    grade: 78
+                },
+                {
+                    name: 'Jo',
+                    grade: 68
+                }
+            ];
+
+            const above80 = students.filter((student) => {
+                // if (student.grade >= 80) {
+                //     return true;
+                // }
+                // OR
+                return student.grade >= 80;
+            }).map((studentFull) => {
+                return ` ${studentFull.name}: ${studentFull.grade}`;
+            });
+
+            console.log((above80).toString());
+
+            // REDUCE
+            const ages = [12, 52, 64, 23, 62, 15];
+            
+            const totalAges = ages.reduce((total, currentValue) => {
+                return total + currentValue;
+            });
+
+            console.log(totalAges);
+
+    </script>
+</body>
+</html>
